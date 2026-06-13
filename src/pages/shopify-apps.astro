@@ -1,0 +1,142 @@
+---
+import { Button, CtaCardSection, TextSection } from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+import HeroSection from '../components/sections/heros/HeroSection.astro';
+import Container from '../components/core/Container.astro';
+
+const seo = {
+	title: 'Shopify Apps | Frost Mango Lab',
+	description:
+		'Our Shopify apps help merchants manage promotions, banners, and storefront experiences.',
+};
+
+const apps = [
+	{
+		name: 'Banner Bird',
+		slug: '/bannerbird',
+		tagline: 'Promotional Banners for Shopify',
+		description:
+			'Create and manage image, video, carousel, countdown, and scheduled banners directly from your Shopify admin. No code required.',
+		features: [
+			'6 banner types',
+			'Live preview',
+			'Theme extension',
+			'Free plan available',
+		],
+		link: 'https://apps.shopify.com/banner-bird',
+	},
+];
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Shopify Apps</h1>
+			<p>
+				Tools built for Shopify merchants. Browse our apps and find the
+				right solution for your store.
+			</p>
+		</div>
+		<div slot="btns-container">
+			<Button href="https://apps.shopify.com/partners/frost-mango-lab" outlined>
+				View on Shopify
+			</Button>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/home/classic-hero.jpg"
+				alt="Frost Mango Lab Shopify Apps"
+				id="home-hero-image"
+			/>
+		</picture>
+	</HeroSection>
+
+	<Container>
+		<section class="apps-list">
+			{apps.map((app) => (
+				<div class="app-card">
+					<div class="app-card__body">
+						<h2 class="app-card__name">{app.name}</h2>
+						<p class="app-card__tagline">{app.tagline}</p>
+						<p class="app-card__description">{app.description}</p>
+						<ul class="app-card__features">
+							{app.features.map((feature) => (
+								<li>{feature}</li>
+							))}
+						</ul>
+					</div>
+					<div class="app-card__actions">
+						<Button href={app.slug}>Learn More</Button>
+						<Button href={app.link} outlined>Install on Shopify</Button>
+					</div>
+				</div>
+			))}
+		</section>
+	</Container>
+
+	<CtaCardSection
+		background="var(--theme-surface-2)"
+		color="var(--theme-on-surface-2)"
+	>
+		<h2>Building something for Shopify?</h2>
+		<p>
+			We are always working on new tools for merchants. Stay tuned for
+			more apps and integrations.
+		</p>
+	</CtaCardSection>
+</Layout>
+
+<style>
+	.apps-list {
+		margin: var(--section-margin) auto;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+	.app-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 2rem;
+		background-color: var(--theme-surface-1);
+		color: var(--theme-on-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+	.app-card__name {
+		font-family: var(--theme-font-family-sans);
+		margin-bottom: 0.25rem;
+	}
+	.app-card__tagline {
+		font-weight: 600;
+		margin-bottom: 0.75rem;
+		opacity: 0.8;
+	}
+	.app-card__description {
+		margin-bottom: 1rem;
+	}
+	.app-card__features {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
+	}
+	.app-card__features li {
+		padding: 0.3rem 0.75rem;
+		background-color: var(--theme-surface-2);
+		color: var(--theme-on-surface-2);
+		border-radius: 999px;
+		font-size: 0.85rem;
+		font-family: var(--theme-font-family-sans);
+	}
+	.app-card__actions {
+		display: flex;
+		gap: 1rem;
+	}
+	@media (max-width: 600px) {
+		.app-card__actions {
+			flex-direction: column;
+		}
+	}
+</style>

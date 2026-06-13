@@ -1,0 +1,188 @@
+---
+import { Button, TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+import CtaCardSection from '../../components/sections/CtaCardSection.astro';
+import BannerBirdNav from '../../components/bannerbird/BannerBirdNav.astro';
+
+const seo = {
+	title: 'Q&A | Banner Bird',
+	description:
+		'Frequently asked questions about Banner Bird — the Shopify app for creating and managing promotional banners.',
+};
+---
+
+<Layout {seo}>
+	<BannerBirdNav current="/bannerbird/qa" />
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Questions & Answers</h1>
+			<p>
+				Everything you need to know about Banner Bird. Can't find an
+				answer? Reach out to our support team.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/bannerbird/hero.png"
+				alt="Banner Bird Q&A"
+				id="home-hero-image"
+			/>
+		</picture>
+	</HeroSection>
+
+	<TextSection narrow>
+		<h2>Getting Started</h2>
+
+		<h3>What is Banner Bird?</h3>
+		<p>
+			Banner Bird is a Shopify app that lets you create and manage
+			promotional banners directly from your Shopify admin panel. You can
+			create image, video, carousel, countdown timer, scheduled, and simple
+			text banners — all without writing any code.
+		</p>
+
+		<h3>How do I install Banner Bird?</h3>
+		<p>
+			Visit the
+			<a href="https://apps.shopify.com/banner-bird">Banner Bird page</a> on
+			the Shopify App Store and click "Add app." The installation takes just a
+			few clicks. Banner Bird installs as a theme extension, so your theme
+			files are never modified.
+		</p>
+
+		<h3>Do I need coding knowledge to use Banner Bird?</h3>
+		<p>
+			No. Banner Bird is designed for merchants of all technical levels. The
+			entire app runs through a visual dashboard — create banners, customize
+			designs, and publish with point-and-click controls.
+		</p>
+
+		<h3>Will Banner Bird work with my current Shopify theme?</h3>
+		<p>
+			Yes. Banner Bird uses Shopify's theme extension system, which is
+			compatible with all Shopify Online Store 2.0 themes. It also works
+			with many older themes. If you encounter compatibility issues, our
+			support team can help.
+		</p>
+
+		<h2>Banner Types</h2>
+
+		<h3>What types of banners can I create?</h3>
+		<p>
+			Banner Bird supports six banner types:
+		</p>
+		<ul>
+			<li><strong>Image banners</strong> — Static promotional images with overlay text and links</li>
+			<li><strong>Video banners</strong> — Auto-playing video backgrounds for immersive promotions</li>
+			<li><strong>Carousel banners</strong> — Rotating slideshows with multiple images or messages</li>
+			<li><strong>Countdown timer banners</strong> — Urgency-driven banners for sales and limited-time offers</li>
+			<li><strong>Scheduled banners</strong> — Banners that automatically appear and disappear on set dates</li>
+			<li><strong>Simple text banners</strong> — Clean, text-focused announcements and alerts</li>
+		</ul>
+
+		<h3>Can I show different banners to different audiences?</h3>
+		<p>
+			Yes. Scheduled banners let you set start and end dates so different
+			promotions run at different times. You can also create multiple banners
+			and toggle them on or off from the dashboard at any time.
+		</p>
+
+		<h3>How many banners can I have active at once?</h3>
+		<p>
+			This depends on your plan. Free plan users can have 1 active banner,
+			Pro plan users can have up to 10, and Enterprise plan users have
+			unlimited active banners.
+		</p>
+
+		<h2>Design & Customization</h2>
+
+		<h3>Can I customize the look of my banners?</h3>
+		<p>
+			Absolutely. Banner Bird includes pre-built design themes you can apply
+			in one click, or you can customize every detail: colors, fonts, spacing,
+			text positioning, button styles, and more. Every banner can match your
+			brand identity.
+		</p>
+
+		<h3>Does Banner Bird support responsive design?</h3>
+		<p>
+			Yes. All banners created with Banner Bird are fully responsive and
+			automatically adjust to look great on desktop, tablet, and mobile
+			devices.
+		</p>
+
+		<h3>Can I preview my banners before publishing?</h3>
+		<p>
+			Yes. Banner Bird provides a live preview feature that shows you exactly
+			how your banner will appear on your storefront. You can preview on
+			different screen sizes before going live.
+		</p>
+
+		<h2>Billing & Plans</h2>
+
+		<h3>Is there a free plan?</h3>
+		<p>
+			Yes. Banner Bird offers a Free plan that includes image and simple text
+			banners with 1 active banner at a time. It's a great way to try the
+			app before committing to a paid plan.
+		</p>
+
+		<h3>What do Pro and Enterprise plans include?</h3>
+		<p>
+			Pro and Enterprise plans unlock additional banner types (video,
+			carousel, countdown, scheduled), more active banners, and access to
+			analytics. Enterprise also includes priority support and custom
+			integration options. See our
+			<a href="/bannerbird/pricing">pricing page</a> for full details.
+		</p>
+
+		<h3>How does billing work?</h3>
+		<p>
+			Billing is handled through the Shopify App Store. Your subscription is
+			billed monthly alongside your Shopify invoice. You can manage your plan
+			and view billing history directly from the Banner Bird dashboard.
+		</p>
+
+		<h3>Can I change or cancel my plan at any time?</h3>
+		<p>
+			Yes. You can upgrade, downgrade, or cancel your plan at any time from
+			the app's billing settings. Changes take effect immediately, and any
+			prorated amount is handled through Shopify's billing system.
+		</p>
+
+		<h2>Technical</h2>
+
+		<h3>Does Banner Bird slow down my store?</h3>
+		<p>
+			No. Banner Bird's theme extension loads banners asynchronously, so it
+			does not impact your store's page load speed or Core Web Vitals.
+		</p>
+
+		<h3>Is my data secure?</h3>
+		<p>
+			Yes. All data is encrypted in transit and at rest. We follow Shopify's
+			security best practices and undergo regular security audits. See our
+			<a href="/bannerbird/privacy">privacy policy</a> for full details.
+		</p>
+
+		<h3>What happens if I uninstall Banner Bird?</h3>
+		<p>
+			When you uninstall, the theme extension is automatically removed from
+			your store and banners stop displaying. Your banner data is deleted
+			from our servers within 30 days. You can export your configurations
+			before uninstalling if needed.
+		</p>
+	</TextSection>
+
+	<CtaCardSection
+		background="var(--theme-surface-2)"
+		color="var(--theme-on-surface-2)"
+	>
+		<h2>Still have questions?</h2>
+		<p>
+			Our support team is ready to help.
+		</p>
+		<Button href="mailto:miprio101@gmail.com">Contact Support</Button>
+	</CtaCardSection>
+</Layout>

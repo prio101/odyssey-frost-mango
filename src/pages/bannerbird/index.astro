@@ -1,0 +1,158 @@
+---
+import {
+	AnnouncementBar,
+	Button,
+	ThreeColumnTextSection,
+	StickyTextImageSection,
+	CtaCardSection,
+	CustomerQuoteSection,
+} from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+import TextSection from '../../components/sections/TextSection.astro';
+import BannerBirdNav from '../../components/bannerbird/BannerBirdNav.astro';
+
+const seo = {
+	title: 'Banner Bird | Promotional Banners for Shopify',
+	description:
+		'Banner Bird helps Shopify merchants create and manage promotional banners directly from their admin panel. Image, video, carousel, countdown, and more.',
+};
+---
+
+<Layout {seo}>
+	<BannerBirdNav current="/bannerbird" />
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Banner Bird</h1>
+			<p>
+				Create and manage promotional banners directly from your Shopify admin panel. No code required.
+			</p>
+		</div>
+		<div slot="btns-container">
+			<Button href="https://apps.shopify.com/banner-bird" outlined>
+				Install on Shopify
+			</Button>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/bannerbird/hero.png"
+				alt="Banner Bird Shopify App"
+				id="home-hero-image"
+			/>
+		</picture>
+	</HeroSection>
+
+	<TextSection narrow>
+		<h2>What is Banner Bird?</h2>
+		<p>
+			Banner Bird helps Shopify merchants create and manage promotional banners
+			directly from their admin panel. Choose from multiple banner types including
+			image, video, carousel, countdown timer, and scheduled banners. Customize
+			every detail with pre-built design themes, adjustable typography, colors,
+			and content positioning. Preview changes in real time before publishing.
+		</p>
+		<p>
+			Banners install as a theme extension and display on your storefront
+			without editing code. Manage everything from a simple dashboard with
+			billing and account settings built in.
+		</p>
+	</TextSection>
+
+	<ThreeColumnTextSection>
+		<div slot="column-1-body">
+			<h2>Banner Types</h2>
+			<p>
+				Create image, video, carousel, countdown timer, scheduled, and simple
+				text banners. Each type is optimized for different promotional needs
+				and campaigns.
+			</p>
+		</div>
+
+		<div slot="column-2-body">
+			<h2>Design Themes</h2>
+			<p>
+				Choose from pre-built design themes or fully customize colors, fonts,
+				and layout. Every banner can match your brand identity with
+				adjustable typography and content positioning.
+			</p>
+		</div>
+
+		<div slot="column-3-body">
+			<h2>Live Preview</h2>
+			<p>
+				Preview every change in real time before publishing. See exactly how
+				your banner will look on your storefront and on any device.
+			</p>
+		</div>
+	</ThreeColumnTextSection>
+
+	<StickyTextImageSection>
+		<div slot="text-container">
+			<h2>Built for Shopify</h2>
+			<h3>Theme Extension</h3>
+			<p>
+				Banners install as a Shopify theme extension, so they display on your
+				storefront without ever touching your theme code. Safe, clean, and
+				compatible with any theme.
+			</p>
+			<h3>Dashboard</h3>
+			<p>
+				Manage all your banners from a single dashboard. Track banner
+				performance, toggle visibility, and update content on the fly.
+			</p>
+			<h3>Billing & Accounts</h3>
+			<p>
+				Handle subscription plans, billing history, and account settings
+				directly within the app. No external billing portal required.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/bannerbird/app-icon.png"
+				alt="Banner Bird Shopify Dashboard"
+				loading="lazy"
+			/>
+		</picture>
+	</StickyTextImageSection>
+
+	<ThreeColumnTextSection>
+		<div slot="column-1-body">
+			<h2>Responsive</h2>
+			<p>
+				Every banner is fully responsive and looks great on desktop, tablet,
+				and mobile. No extra configuration needed.
+			</p>
+		</div>
+
+		<div slot="column-2-body">
+			<h2>Performance</h2>
+			<p>
+				Banner performance tracking lets you see impressions and engagement
+				data so you can optimize your campaigns over time.
+			</p>
+		</div>
+
+		<div slot="column-3-body">
+			<h2>Flexible Plans</h2>
+			<p>
+				Start free and upgrade when you need more. Free, Pro, and Enterprise
+				tiers unlock additional banner types, more active banners, and
+				analytics.
+			</p>
+		</div>
+	</ThreeColumnTextSection>
+
+	<CtaCardSection
+		background="var(--theme-surface-2)"
+		color="var(--theme-on-surface-2)"
+	>
+		<h2>Get Started with Banner Bird</h2>
+		<p>
+			Install Banner Bird on your Shopify store and start creating promotional
+			banners in minutes.
+		</p>
+		<Button href="https://apps.shopify.com/banner-bird">
+			Install on Shopify
+		</Button>
+	</CtaCardSection>
+</Layout>

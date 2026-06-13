@@ -4,6 +4,10 @@ export const nav = [
 		slug: '/',
 	},
 	{
+		title: 'Shopify Apps',
+		slug: '/shopify-apps',
+	},
+	{
 		title: 'Blog',
 		slug: '/blog',
 	},
