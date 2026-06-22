@@ -1,0 +1,58 @@
+---
+import {
+	AnnouncementBar,
+	Button,
+	ThreeColumnTextSection,
+	StickyTextImageSection,
+	CtaCardSection,
+	CustomerQuoteSection,
+} from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+import TextSection from '../../components/sections/TextSection.astro';
+import BannerBirdNav from '../../components/bannerbird/BannerBirdNav.astro';
+
+const seo = {
+	title: 'Compare Wise',
+	description:
+		'Compare Wise helps Shopify merchants to manage feature for comparison tables directly from their admin panel.',
+};
+---
+
+<Layout {seo}>
+	<BannerBirdNav current="/compare-wise" />
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Compare Wise</h1>
+			<p>
+        Manage the comparison feature for best customer experience to drive more sells.
+			</p>
+		</div>
+		<div slot="btns-container">
+			<Button href="https://apps.shopify.com/compare-wise" outlined>
+				Install on Shopify
+			</Button>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/compare-wise/hero.png"
+				alt="Compare Wise Shopify App"
+				id="home-hero-image"
+			/>
+		</picture>
+	</HeroSection>
+
+
+	<CtaCardSection
+		background="var(--theme-surface-2)"
+		color="var(--theme-on-surface-2)"
+	>
+		<h2>Get Started with Compare Wise</h2>
+		<p>
+			Install Compare Wise on your Shopify store and start creating Comparison Tables Settings for shop in minutes.
+		</p>
+		<Button href="https://apps.shopify.com/banner-bird">
+			Install on Shopify
+		</Button>
+	</CtaCardSection>
+</Layout>
