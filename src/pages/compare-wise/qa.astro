@@ -1,0 +1,184 @@
+---
+import { Button, TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+import CtaCardSection from '../../components/sections/CtaCardSection.astro';
+import CompareWiseNav from '../../components/compare-wise/CompareWiseNav.astro';
+
+const seo = {
+	title: 'Q&A | Compare Wise',
+	description:
+		'Frequently asked questions about Compare Wise — the Shopify app for creating and managing product comparison tables.',
+};
+---
+
+<Layout {seo}>
+	<CompareWiseNav current="/compare-wise/qa" />
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Questions & Answers</h1>
+			<p>
+				Everything you need to know about Compare Wise. Can't find an
+				answer? Reach out to our support team.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/compare-wise/hero.png"
+				alt="Compare Wise Q&A"
+				id="home-hero-image"
+			/>
+		</picture>
+	</HeroSection>
+
+	<TextSection narrow>
+		<h2>Getting Started</h2>
+
+		<h3>What is Compare Wise?</h3>
+		<p>
+			Compare Wise is a Shopify app that lets you create and manage
+			product comparison tables directly from your Shopify admin panel. You
+			can build feature-rich comparison tables — all without writing any code.
+		</p>
+
+		<h3>How do I install Compare Wise?</h3>
+		<p>
+			Visit the
+			<a href="https://apps.shopify.com/compare-wise">Compare Wise page</a> on
+			the Shopify App Store and click "Add app." The installation takes just a
+			few clicks. Compare Wise installs as a theme extension, so your theme
+			files are never modified.
+		</p>
+
+		<h3>Do I need coding knowledge to use Compare Wise?</h3>
+		<p>
+			No. Compare Wise is designed for merchants of all technical levels. The
+			entire app runs through a visual dashboard — create tables, customize
+		 designs, and publish with point-and-click controls.
+		</p>
+
+		<h3>Will Compare Wise work with my current Shopify theme?</h3>
+		<p>
+			Yes. Compare Wise uses Shopify's theme extension system, which is
+			compatible with all Shopify Online Store 2.0 themes. It also works
+			with many older themes. If you encounter compatibility issues, our
+			support team can help.
+		</p>
+
+		<h2>Comparison Tables</h2>
+
+		<h3>What types of comparison tables can I create?</h3>
+		<p>
+			Compare Wise supports flexible comparison table configurations:
+		</p>
+		<ul>
+			<li><strong>Feature comparison tables</strong> — Compare products side by side with custom feature rows</li>
+			<li><strong>Pricing tables</strong> — Display pricing tiers with highlighted recommended plans</li>
+			<li><strong>Spec tables</strong> — Technical specifications comparison for detailed product data</li>
+			<li><strong>Plan comparison tables</strong> — Service or subscription plan comparisons</li>
+		</ul>
+
+		<h3>How many products can I include in a comparison table?</h3>
+		<p>
+			This depends on your plan. Free plan users can include up to 5 products
+			per table, Pro plan users can include up to 20, and Enterprise plan
+			users have unlimited products per table.
+		</p>
+
+		<h3>Can I highlight specific features or products?</h3>
+		<p>
+			Yes. Pro and Enterprise plans include feature highlighting, allowing
+			you to draw attention to specific rows or columns in your comparison
+			tables.
+		</p>
+
+		<h2>Design & Customization</h2>
+
+		<h3>Can I customize the look of my comparison tables?</h3>
+		<p>
+			Absolutely. Compare Wise includes pre-built design themes you can apply
+			in one click, or you can customize every detail: colors, fonts, spacing,
+			column widths, and more. Every table can match your brand identity.
+		</p>
+
+		<h3>Does Compare Wise support responsive design?</h3>
+		<p>
+			Yes. All comparison tables created with Compare Wise are fully responsive and
+			automatically adjust to look great on desktop, tablet, and mobile
+			devices.
+		</p>
+
+		<h3>Can I preview my tables before publishing?</h3>
+		<p>
+			Yes. Compare Wise provides a live preview feature that shows you exactly
+			how your comparison table will appear on your storefront. You can preview on
+			different screen sizes before going live.
+		</p>
+
+		<h2>Billing & Plans</h2>
+
+		<h3>Is there a free plan?</h3>
+		<p>
+			Yes. Compare Wise offers a Free plan that includes basic comparison
+			tables with up to 5 products per table. It's a great way to try the
+			app before committing to a paid plan.
+		</p>
+
+		<h3>What do Pro and Enterprise plans include?</h3>
+		<p>
+			Pro and Enterprise plans unlock more products per table, custom columns,
+			feature highlighting, scheduled comparisons, and access to analytics.
+			Enterprise also includes priority support and custom
+			integration options. See our
+			<a href="/compare-wise/pricing">pricing page</a> for full details.
+		</p>
+
+		<h3>How does billing work?</h3>
+		<p>
+			Billing is handled through the Shopify App Store. Your subscription is
+			billed monthly alongside your Shopify invoice. You can manage your plan
+			and view billing history directly from the Compare Wise dashboard.
+		</p>
+
+		<h3>Can I change or cancel my plan at any time?</h3>
+		<p>
+			Yes. You can upgrade, downgrade, or cancel your plan at any time from
+			the app's billing settings. Changes take effect immediately, and any
+			prorated amount is handled through Shopify's billing system.
+		</p>
+
+		<h2>Technical</h2>
+
+		<h3>Does Compare Wise slow down my store?</h3>
+		<p>
+			No. Compare Wise's theme extension loads comparison tables asynchronously, so it
+			does not impact your store's page load speed or Core Web Vitals.
+		</p>
+
+		<h3>Is my data secure?</h3>
+		<p>
+			Yes. All data is encrypted in transit and at rest. We follow Shopify's
+			security best practices and undergo regular security audits. See our
+			<a href="/compare-wise/privacy">privacy policy</a> for full details.
+		</p>
+
+		<h3>What happens if I uninstall Compare Wise?</h3>
+		<p>
+			When you uninstall, the theme extension is automatically removed from
+			your store and comparison tables stop displaying. Your table data is deleted
+			from our servers within 30 days. You can export your configurations
+			before uninstalling if needed.
+		</p>
+	</TextSection>
+
+	<CtaCardSection
+		background="var(--theme-surface-2)"
+		color="var(--theme-on-surface-2)"
+	>
+		<h2>Still have questions?</h2>
+		<p>
+			Our support team is ready to help.
+		</p>
+		<Button href="mailto:miprio101@gmail.com">Contact Support</Button>
+	</CtaCardSection>
+</Layout>

@@ -1,0 +1,199 @@
+---
+import { Button, TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+import CtaCardSection from '../../components/sections/CtaCardSection.astro';
+import ThreeColumnTextSection from '../../components/sections/ThreeColumnTextSection.astro';
+import CompareWiseNav from '../../components/compare-wise/CompareWiseNav.astro';
+
+const seo = {
+	title: 'Pricing | Compare Wise',
+	description:
+		'Compare Wise pricing plans — Free, Pro, and Enterprise. Choose the plan that fits your Shopify store.',
+};
+---
+
+<Layout {seo}>
+	<CompareWiseNav current="/compare-wise/pricing" />
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Simple, Transparent Pricing</h1>
+			<p>
+				Start for free and upgrade as your store grows. All plans include
+				Compare Wise's core features with no hidden fees.
+			</p>
+		</div>
+		<div slot="btns-container">
+			<Button disabled href="#">Get Started Free</Button>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/compare-wise/hero.png"
+				alt="Compare Wise Pricing"
+				id="home-hero-image"
+			/>
+		</picture>
+	</HeroSection>
+
+	<TextSection narrow>
+		<h2>Compare Plans</h2>
+		<p>
+			Every plan includes comparison tables, responsive design, theme extension
+			installation, and access to the dashboard. Choose the plan that
+			unlocks the features you need.
+		</p>
+	</TextSection>
+
+	<ThreeColumnTextSection>
+		<div slot="column-1-body">
+			<h2>Free</h2>
+			<p class="pricing__price">$0 / month</p>
+			<p>
+				Get started with Compare Wise at no cost. Perfect for stores that
+				need a single comparison table.
+			</p>
+			<ul class="pricing__list">
+				<li>1 active comparison table</li>
+				<li>Up to 5 products per table</li>
+				<li>Pre-built design themes</li>
+				<li>Live preview</li>
+				<li>Responsive design</li>
+				<li>Theme extension install</li>
+				<li>Community support</li>
+			</ul>
+			<Button disabled href="#">
+				Install Free
+			</Button>
+		</div>
+
+		<div slot="column-2-body">
+			<h2>Pro</h2>
+			<p class="pricing__price">$9.99 / month</p>
+			<p>
+				Unlock more comparison tables and products for growing stores
+				with extensive catalogs.
+			</p>
+			<ul class="pricing__list">
+				<li>Up to 10 active comparison tables</li>
+				<li>Up to 20 products per table</li>
+				<li>All Free plan features</li>
+				<li>Custom columns &amp; fields</li>
+				<li>Feature highlighting</li>
+				<li>Scheduled comparisons</li>
+				<li>Custom colors &amp; fonts</li>
+				<li>Performance analytics</li>
+				<li>Priority email support</li>
+			</ul>
+			<Button href="#">
+				Upgrade to Pro
+			</Button>
+		</div>
+
+		<div slot="column-3-body">
+			<h2>Enterprise</h2>
+			<p class="pricing__price">$29.99 / month</p>
+			<p>
+				For high-volume stores and agencies that need unlimited tables
+				and advanced features.
+			</p>
+			<ul class="pricing__list">
+				<li>Unlimited comparison tables</li>
+				<li>Unlimited products per table</li>
+				<li>All Pro plan features</li>
+				<li>Advanced analytics dashboard</li>
+				<li>A/B testing support</li>
+				<li>Custom branding options</li>
+				<li>Bulk table management</li>
+				<li>Dedicated account manager</li>
+				<li>99.9% uptime SLA</li>
+			</ul>
+			<Button href="#">
+				Upgrade to Enterprise
+			</Button>
+		</div>
+	</ThreeColumnTextSection>
+
+	<TextSection narrow>
+		<h2>Frequently Asked Questions</h2>
+
+		<h3>Can I try Pro or Enterprise before committing?</h3>
+		<p>
+			Yes. Start with the Free plan and upgrade at any time from within the
+			app. When you upgrade, you get immediate access to all features in your
+			new plan.
+		</p>
+
+		<h3>How does billing work?</h3>
+		<p>
+			All billing is handled through the Shopify App Store. Your subscription
+			appears on your regular Shopify invoice. No separate account or payment
+			method is needed.
+		</p>
+
+		<h3>Can I change plans at any time?</h3>
+		<p>
+			Yes. Upgrade, downgrade, or cancel at any time. When upgrading, you'll
+			be charged a prorated amount for the remainder of the billing cycle.
+			When downgrading, the change takes effect at the start of your next
+			billing cycle.
+		</p>
+
+		<h3>What happens to my tables if I downgrade?</h3>
+		<p>
+			If you downgrade to a plan with a lower active table limit, your
+			excess tables will be paused (not deleted). You can reactivate them
+			by upgrading again or by removing tables to fit within your plan
+			limit.
+		</p>
+
+		<h3>Do you offer discounts for annual billing?</h3>
+		<p>
+			Yes. Annual billing is available for Pro and Enterprise plans at a 20%
+			discount. Select annual billing during checkout on the Shopify App
+			Store.
+		</p>
+
+		<h3>Is there a trial period for paid plans?</h3>
+		<p>
+			Pro and Enterprise plans include a 7-day free trial. You can cancel
+			during the trial period at no charge.
+		</p>
+	</TextSection>
+
+	<CtaCardSection
+		background="var(--theme-surface-2)"
+		color="var(--theme-on-surface-2)"
+	>
+		<h2>Ready to get started?</h2>
+		<p>
+			Install Compare Wise today and create your first comparison table in minutes.
+		</p>
+		<Button href="https://apps.shopify.com/compare-wise">
+			Install on Shopify
+		</Button>
+	</CtaCardSection>
+</Layout>
+
+<style>
+	.pricing__price {
+		font-family: var(--theme-font-family-sans);
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+	.pricing__list {
+		list-style: none;
+		padding: 0;
+		margin: 1.5rem 0;
+		text-align: left;
+	}
+	.pricing__list li {
+		padding: 0.4rem 0;
+		border-bottom: 1px solid var(--theme-divider);
+	}
+	.pricing__list li::before {
+		content: "✓ ";
+		color: var(--theme-primary);
+		font-weight: 700;
+	}
+</style>

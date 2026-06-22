@@ -10,7 +10,7 @@ import {
 import Layout from '../../layouts/Page.astro';
 import HeroSection from '../../components/sections/heros/HeroSection.astro';
 import TextSection from '../../components/sections/TextSection.astro';
-import BannerBirdNav from '../../components/bannerbird/BannerBirdNav.astro';
+import CompareWiseNav from '../../components/compare-wise/CompareWiseNav.astro';
 
 const seo = {
 	title: 'Compare Wise',
@@ -20,7 +20,7 @@ const seo = {
 ---
 
 <Layout {seo}>
-	<BannerBirdNav current="/compare-wise" />
+	<CompareWiseNav current="/compare-wise" />
 	<HeroSection>
 		<div slot="text-container">
 			<h1>Compare Wise</h1>
@@ -51,7 +51,7 @@ const seo = {
 		<p>
 			Install Compare Wise on your Shopify store and start creating Comparison Tables Settings for shop in minutes.
 		</p>
-		<Button href="https://apps.shopify.com/banner-bird">
+		<Button href="https://apps.shopify.com/compare-wise">
 			Install on Shopify
 		</Button>
 	</CtaCardSection>
